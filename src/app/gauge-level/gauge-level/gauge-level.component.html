@@ -1,0 +1,74 @@
+
+@if (gaugeType() === 'horizontal-linear') {
+  <div class="progressContainerHL">
+    <div class="progressBarHL" [ngStyle]="{ 'width': valueProgress(),
+   'background': colorProgressLinear(), 'height': heightHorizontal() }">
+    </div>
+    @if (showProgressText() === true) {
+      <div class="progressTextInsideHL">
+        <div class="progressText {{ classHorizontalText }}">
+          {{ valueProgress() }}
+        </div>
+      </div>
+    }
+  </div>
+} @else if (gaugeType() === 'vertical-linear') {
+  <div class="progressContainerVL">
+    <div class="progressBarVL" [ngStyle]="{ 'height': valueProgress(),
+                  'background': colorProgressLinear() }">
+    </div>
+    @if (showProgressText() === true) {
+      <div class="progressTextInsideVL">
+        <div class="progressText {{ classVerticalText }}">
+          {{ valueProgress() }}
+        </div>
+      </div>
+    }
+  </div>
+} @else if (gaugeType() === 'horizontal-step') {
+  <div class="progressContainerHS">
+    @for (gauge of stepLevel(); track $index) {
+      <div class="progressBarLevelHS" [matTooltip]="gauge.levelStepPercValue"
+         [matTooltipDisabled]="tooltipDisabled()" [ngStyle]="{ 'height': gauge.heightStep,
+                           'background': gauge.currentColor }">
+        @if(this.showAlertLevelPercOnStep() === true) {
+          <div class="progrssAlertLevelPercOnStep">
+            <div [ngStyle]="{ 'color': gauge.levelStepPercColor }">
+              {{ gauge.levelStepPercValue }}
+            </div>
+          </div>
+        }
+      </div>
+    }
+    @if (showProgressText() === true) {
+      <div class="progressTextInsideHS">
+        <div class="progressText {{ classHorizontalText }}">
+          {{ valueProgress() }}
+        </div>
+      </div>
+    }
+  </div>
+} @else if (gaugeType() === 'vertical-step') {
+  <div class="progressContainerVS">
+    @for (gauge of stepLevel(); track $index) {
+      <div class="progressBarLevelVS" [matTooltip]="gauge.levelStepPercValue"
+         [matTooltipDisabled]="tooltipDisabled()" [ngStyle]="{ 'height': gauge.heightStep,
+                           'background': gauge.currentColor }">
+        @if(this.showAlertLevelPercOnStep() === true) {
+          <div class="progrssAlertLevelPercOnStep">
+            <div [ngStyle]="{ 'color': gauge.levelStepPercColor }">
+              {{ gauge.levelStepPercValue }}
+            </div>
+          </div>
+        }
+      </div>
+    }
+    @if (showProgressText() === true) {
+      <div class="progressTextInsideVS">
+        <div class="progressText {{ classVerticalText }}">
+          {{ valueProgress() }}
+        </div>
+      </div>
+    }
+  </div>
+}

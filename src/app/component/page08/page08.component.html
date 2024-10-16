@@ -1,0 +1,36 @@
+<div class="pagecontainer">
+  <h2>Page-8</h2>
+
+  <mat-form-field class="selectfloorlans">
+    <mat-label>Select a gauge number step</mat-label>
+    <mat-select name="selectednumberstep" [ngModel]="selectednumberstep"
+             (selectionChange)="onSelectedNumberStep($event)">
+      <mat-option [value]="'step1'">Step 10</mat-option>
+      <mat-option [value]="'step2'">Step 15</mat-option>
+    </mat-select>
+  </mat-form-field><br>
+
+  <div class="gauge1">
+    <app-gauge-level [options]=" options1" [valueLevel]="valueLevel()" #gauge1
+              (stepvalueprogress)="onStepValueProgress1($event)">
+    </app-gauge-level>
+    @if (step1) {
+      <div class="stepvalue">
+        {{ step1.progress }}% ({{ step1.value }})
+      </div>
+    }
+  </div>
+
+  <br>
+
+  <div class="gauge2">
+    <app-gauge-level [options]=" options2" [valueLevel]="valueLevel()" #gauge2
+              (stepvalueprogress)="onStepValueProgress1($event)">
+    </app-gauge-level>
+    @if (step1) {
+      <div class="stepvalue">
+        {{ step1.progress }}% ({{ step1.value }})
+      </div>
+    }
+  </div>
+</div>

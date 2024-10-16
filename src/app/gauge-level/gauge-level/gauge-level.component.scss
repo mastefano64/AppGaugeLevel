@@ -1,0 +1,140 @@
+
+.progressContainerHL {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: lightgrey;
+}
+
+.progressBarHL {
+  width: 0%; // *
+  height: 50px;
+  background: #00ffff;
+  cursor: pointer;
+}
+
+.progressTextInsideHL {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+// ----------------
+
+.progressContainerVL {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+  background: lightgrey;
+}
+
+.progressBarVL {
+  width: 100%;
+  height: 0%; // *
+  background: #00ffff;
+  cursor: pointer;
+}
+
+.progressTextInsideVL {
+  position: absolute;
+  top: calc(50% - 30px);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+// ----------------
+
+.progressContainerHS {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  background: lightgrey;
+}
+
+.progressBarLevelHS {
+  flex: 1 1 auto;
+  width: 30px;
+  height: 50px;
+  margin: 2px;
+  background: #00ffff;
+  cursor: pointer;
+}
+
+.progressTextInsideHS {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+// ----------------
+
+.progressContainerVS {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: lightgrey;
+}
+
+.progressBarLevelVS {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 30px;
+  margin: 2px;
+  background: #00ffff;
+  cursor: pointer;
+}
+
+.progressTextInsideVS {
+  position: absolute;
+  top: calc(50% - 30px);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+// ----------------
+
+.progrssAlertLevelPercOnStep {
+  height: 100%;
+  display: flex;
+  margin: 0px 10px 0px 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.progressText {
+  height: 100%;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

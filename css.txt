@@ -1,0 +1,55 @@
+.progressBarHL {
+  width: 50%; // *
+  height: 50px;
+  background: red;
+}
+
+.progressBarVL {
+  width: 100%;
+  height: 50%; // *
+  background: red;
+}
+
+.progressBarLevelHS {
+  width: 30px;
+  height: 50px;
+  margin: 2px;
+  background: red;
+}
+
+.progressBarLevelVS {
+  width: 100%;
+  height: 30px;
+  margin: 2px;
+  background: red;
+  opacity: 1;
+}
+
+===
+
+// Funzione per calcolare lo stile in base alla temperatura
+function styleFunction(feature) {
+  const temperature = feature.get('temperatura');
+
+  // Calcoliamo un valore normalizzato tra 0 e 1
+  const normalizedTemperature = (temperature - minTemperature) / (maxTemperature - minTemperature);
+
+  // Creiamo un colore interpolato tra blu e rosso
+  const color = [0, 0, 255]; // Blu
+  color[0] = Math.round(255 * normalizedTemperature); // Aumenta il rosso gradualmente
+  color[2] = Math.round(255 * (1 - normalizedTemperature)); // Diminuisce il blu gradualmente
+
+  return new ol.style.Style({
+    fill: new ol.style.Fill({
+      color: 'rgb(' + color.join(',') + ')'
+    })
+  });
+}
+
+===
+
+
+
+
+
+

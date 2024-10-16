@@ -1,0 +1,27 @@
+<div class="pagecontainer">
+  <h2>Page-1</h2>
+
+  <div class="gauge1">
+    <app-gauge-level [options]=" options1" [valueLevel]="valueLevel()"
+          (linearvalueprogress)="onLinearValueProgress1($event)">
+    </app-gauge-level>
+    @if (linear1) {
+      <div class="linearvalue">
+        {{ linear1.progress }}% ({{ linear1.value }})
+      </div>
+    }
+  </div>
+
+  <br>
+
+  <div class="gauge2">
+    <app-gauge-level [options]=" options2" [valueLevel]="valueLevel()"
+          (linearvalueprogress)="onLinearValueProgress2($event)">
+    </app-gauge-level>
+    @if (linear2) {
+      <div class="linearvalue">
+        {{ linear2.progress }}% ({{ linear2.value }})
+      </div>
+    }
+  </div>
+</div>
