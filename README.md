@@ -18,7 +18,7 @@ You can set 2 optional 'alert' thresholds, so when the threshold is reached, the
 
 ### GaugeLevelOptions
 
-**gaugeType**: Tipo progressbar / indicatore di livello. (*'horizontal-linear', 'horizontal-step', 'vertical-linear', 'vertical-step'*).
+**gaugeType**: Type progressbar / indicatore di livello. (*'horizontal-linear', 'horizontal-step', 'vertical-linear', 'vertical-step'*).
 
 **minValue**: Minimum input value (*number - required*).
 
@@ -34,25 +34,25 @@ You can set 2 optional 'alert' thresholds, so when the threshold is reached, the
 
 **showProgressText**: Percentage progress indication in text. (*boolean - default: true*).
 
-**showLinearProgressAlert**: Progress indication with linear alert mode (2 optional 'alert' thresholds can be set, so when the threshold is reached, the progress indicator will change color). (*boolean - default: false*).
+**showLinearProgressAlert**: Progress indication with alert, in linear mode (2 optional 'alert' thresholds can be set, so when the threshold is reached, the progress indicator will change color). (*boolean - default: false*).
 
-**showStepProgressAlert**: Progress indication with alert in step mode (You can set 2 optional 'alert' thresholds, this way when the threshold is reached, the progress indicator will change color). (*boolean - default: false*).
+**showStepProgressAlert**: Progress indication with alert, in step mode (You can set 2 optional 'alert' thresholds, this way when the threshold is reached, the progress indicator will change color). (*boolean - default: false*).
 
 **showAlertLevelOnStep**: In step mode the color corresponding to the threshold is shown in the background. (*boolean - default: false*).
 
-**showAlertLevelPercOnStep**: In step mode the corresponding progress percentage is shown. (*boolean - default: false*).
+**showAlertLevelPercOnStep**: In step mode the corresponding progress percentage is shown (on the step). (*boolean - default: false*).
 
-**thresholdStep**: Specifies whether the 'progress indicator' changes color when entering or exiting range. (*'after', 'before' - default: 'before'*).
+**thresholdStep**: Specifies whether the 'progress indicator' changes color when entering or exiting on step-range. (*'after', 'before' - default: 'before'*).
 
-**alertLevelLinearOrange**: Specifica il valore della percentuale di progresso orange - soglia. (si possono stabilire 2 soglie di 'allerta' opzionali, in questo modo al raggiungimento della soglia, l'indicatore di progresso cambierà colore). (*number - default: 40*).
+**alertLevelLinearOrange**: Specifies the value of the orange progress percentage - threshold. (2 optional 'alert' thresholds can be set, so that when the threshold is reached, the progress indicator will change color). (*number - default: 40*).
 
-**alertLevelLinearRed**: Specifies the value of the orange progress percentage - threshold. (2 optional 'alert' thresholds can be set, so when the threshold is reached, the progress indicator will change color). (*number - default: 20*).
+**alertLevelLinearRed**: Specifies the value of the red progress percentage - threshold. (2 optional 'alert' thresholds can be set, so when the threshold is reached, the progress indicator will change color). (*number - default: 20*).
 
-**alertLevelStepOrange**: Specifica il numero dello step orange - soglia. (si possono stabilire 2 soglie di 'allerta' opzionali, in questo modo al raggiungimento della soglia, l'indicatore di progresso cambierà colore.). (*number - default: 4*).
+**alertLevelStepOrange**: Specifies the number of the orange step - threshold. (You can set 2 optional 'alert' thresholds, so when the threshold is reached, the progress indicator will change color). (*number - default: 4*).
 
 **alertLevelStepRed**: Specify the number of the orange step - threshold. (You can set 2 optional 'alert' thresholds, so when the threshold is reached, the progress indicator will change color). (*number - default: 2*).
 
-**alphaColor**: If a step bar has been chosen, it is also possible to set the background color of the steps, with the color corresponding to the 3 areas delimited by the 'alert' thresholds. When reached, the background color will change from opaque to full. The alphaColor property defines the alpha color of the opaque state. (*string - default: '1A'*).
+**alphaColor**: If a step bar has been chosen, it is also possible to set the background color of the step, with the color corresponding to the 3 areas delimited by the 'alert' thresholds. When reached, the background color will change from opaque to full. The alphaColor property defines the alpha color of the opaque state. (*string - default: '1A'*).
 
 **defaultLevelColor**: Default/foreground color of the progress bar. (*string - default: '#00ffff'*).
 

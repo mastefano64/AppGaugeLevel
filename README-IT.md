@@ -40,7 +40,7 @@ Si possono stabilire 2 soglie di 'allerta' opzionali, in questo modo al raggiung
 
 **showAlertLevelOnStep**: In modalità step viene mostrato il colore corrispondente alla soglia in background. (*boolean - default: false*).
 
-**showAlertLevelPercOnStep**: In modalità step viene mostrata la percentuale di progresso corrispondente. (*boolean - default: false*).
+**showAlertLevelPercOnStep**: In modalità step viene mostrata la percentuale di progresso corrispondente (sullo step). (*boolean - default: false*).
 
 **thresholdStep**: Specifica se 'l'indicatore di avanzamento' cambia colore quando entra nel range o quando esce.  (*'after', 'before' - default: 'before'*).
 
@@ -52,7 +52,7 @@ Si possono stabilire 2 soglie di 'allerta' opzionali, in questo modo al raggiung
 
 **alertLevelStepRed**: Specifica il numero dello step red - soglia. (si possono stabilire 2 soglie di 'allerta' opzionali, in questo modo al raggiungimento della soglia, l'indicatore di progresso cambierà colore.). (*number - default: 2*).
 
-**alphaColor**: Se è stata scelta una barra a step, è anche possibile impostare il colore di backgroung degli step, con il colore corrispondente alle 3 aree delimitate dalle soglie di 'allerta'. Al raggiungimento il colore di backgroung passerà da opaco a pieno. La proprietà alphaColor definisce alpha color dello stato opaco. (*string - default: '1A'*).
+**alphaColor**: Se è stata scelta una barra a step, è anche possibile impostare il colore di backgroung dello step, con il colore corrispondente alle 3 aree delimitate dalle soglie di 'allerta'. Al raggiungimento il colore di backgroung passerà da opaco a pieno. La proprietà alphaColor definisce alpha color dello stato opaco. (*string - default: '1A'*).
 
 **defaultLevelColor**: Colore di default/foreground della barra di progresso. (*string - default: '#00ffff'*).
 
